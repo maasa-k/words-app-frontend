@@ -1,7 +1,13 @@
 import './App.css';
+import WordForm from './WordForm';
 
 function App() {
-	return <div className='App'>Learn the Words App</div>;
+	return (
+		<div className='App'>
+			<h1>Learn the Words</h1>
+			<WordForm />
+		</div>
+	);
 }
 
 export default App;
