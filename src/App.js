@@ -4,7 +4,7 @@ import WordForm from './WordForm';
 function App() {
 	return (
 		<div className='App'>
-			<h1>Learn the Words</h1>
+			<h1>Learn the Word</h1>
 			<WordForm />
 		</div>
 	);
