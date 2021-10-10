@@ -11,7 +11,7 @@ const WordForm = () => {
 		e.preventDefault();
 		fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
 			.then((res) => res.json())
-			.then((definition) => console.log(definition));
+			.then((result) => console.log(result[0].meanings));
 	};
 
 	return (
