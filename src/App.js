@@ -4,7 +4,7 @@ import WordForm from './WordForm';
 import Result from './Result';
 
 const getDefinition = (definition) => {
-	useState('');
+	console.log(definition)
 };
 
 function App() {

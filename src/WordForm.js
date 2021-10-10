@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const WordForm = () => {
+const WordForm = (props) => {
 	const [word, setWord] = useState('');
 
 	const handleChange = (e) => {
@@ -11,7 +11,7 @@ const WordForm = () => {
 		e.preventDefault();
 		fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
 			.then((res) => res.json())
-			.then((result) => console.log(result[0].meanings));
+			.then((result) => props.getDefinition((result[0].meanings)));
 	};
 
 	return (
