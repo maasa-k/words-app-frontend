@@ -12,12 +12,13 @@ const WordForm = (props) => {
 		fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
 			.then((res) => res.json())
 			.then((result) => props.getDefinition((result[0].meanings)));
+		setWord('')
 	};
 
 	return (
 		<div>
 			<form onSubmit={handleSubmit}>
-				<input type='text' placeholder='Type in word here' value={word} onChange={handleChange} />
+				<input type='text' placeholder='Type in word here' value={word} name={word} onChange={handleChange} />
 				<br />
 				<br />
 				<button type='submit'>Find Definition</button>
