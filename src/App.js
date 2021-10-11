@@ -6,6 +6,7 @@ import Result from "./Result";
 function App() {
   const [word, setWord] = useState("");
   const [definition, setDefinition] = useState("");
+  console.log(definition);
 
   const getWord = (word) => {
     setWord(word);
