@@ -3,17 +3,19 @@ import './App.css';
 import WordForm from './WordForm';
 import Result from './Result';
 
-const getDefinition = (definition) => {
-	console.log(definition)
-};
-
 function App() {
+	const [definition, setDefinition] = useState('')
+	
+	const getDefinition = (definition) => {
+		setDefinition(definition[0].definitions)
+	};
+
 	return (
 		<div className='App'>
 			<h1>Learn the Word</h1>
 			<WordForm getDefinition={getDefinition} />
 			<br />
-			<Result />
+			<Result definition={definition} />
 		</div>
 	);
 }
