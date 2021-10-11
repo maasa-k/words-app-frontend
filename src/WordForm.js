@@ -11,7 +11,8 @@ const WordForm = (props) => {
 		e.preventDefault();
 		fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
 			.then((res) => res.json())
-			.then((result) => props.getDefinition((result[0].meanings)));
+			.then((result) => props.getDefinition((result[0].meanings)))
+			.then(props.getWord(word))
 		setWord('')
 	};
 
