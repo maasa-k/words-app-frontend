@@ -7,7 +7,6 @@ const Result = (props) => {
 
     const synonymsArr = props.definition && props.definition.map((def) => def.synonyms);
     const synonyms = synonymsArr && synonymsArr.map((synonym) => synonym);
-    console.log(synonyms);
 
     return (
         <div>
@@ -17,6 +16,7 @@ const Result = (props) => {
             {definitions && definitions.map((definition) => <li key={Math.random()}>{definition}</li>)}
 
             <h3>Synonyms:</h3>
+            {synonyms && synonyms.map((synonym) => <li>{synonym}</li>)}
             {/* {synonyms && synonyms.map((synonym) => <li key={Math.random()}>{synonym}</li>)} */}
             {/* {definitions && definitions.map((definition) => <li key={Math.random()}>{definition}</li>)} */}
             {/* {props.definition && props.definition.map((def) => <li key={Math.random()}>{def.definition}</li>)} */}
