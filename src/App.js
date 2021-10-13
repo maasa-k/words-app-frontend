@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import "./App.css";
-import WordForm from "./WordForm";
-import Result from "./Result";
+import React, { useState } from 'react';
+import './App.css';
+import WordForm from './WordForm';
+import Result from './Result';
 
 const App = () => {
-    const [word, setWord] = useState("");
-    const [definition, setDefinition] = useState("");
+    const [word, setWord] = useState('');
+    const [definition, setDefinition] = useState('');
 
     const getWord = (word) => {
         setWord(word);
@@ -16,7 +16,7 @@ const App = () => {
     };
 
     return (
-        <div className="App">
+        <div className='App'>
             <h1>Learn the Word</h1>
             <br />
 

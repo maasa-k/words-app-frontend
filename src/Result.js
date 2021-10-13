@@ -1,24 +1,24 @@
-import React from "react";
+import React from 'react';
 
 const Result = (props) => {
     const word = props.word && props.word;
 
-    console.log(props);
-
-    // const definitions = props.definition && props.definition.map((def) => def.definition);
-
-    // const synonymsArr = props.definition && props.definition.map((def) => def.synonyms);
-    // const synonyms = synonymsArr && synonymsArr.map((synonym) => synonym);
+    const noun = props.definition && props.definition.meaning.noun;
+    const verb = props.definition && props.definition.meaning.verb;
+    const adverb = props.definition && props.definition.meaning.adverb;
+    const adjective = props.definition && props.definition.meaning.adjective;
 
     return (
         <div>
             <h1>{word}</h1>
 
             <h3>Definitions:</h3>
-            {/* {definitions && definitions.map((definition) => <li key={Math.random()}>{definition}</li>)} */}
+            <p>{noun}</p>
+            <p>{verb}</p>
+            <p>{adverb}</p>
+            <p>{adjective}</p>
 
             <h3>Synonyms:</h3>
-            {/* {synonyms && synonyms.map((synonym) => <li>{synonym}</li>)} */}
         </div>
     );
 };

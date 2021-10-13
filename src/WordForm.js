@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const WordForm = (props) => {
-    const [word, setWord] = useState("");
+    const [word, setWord] = useState('');
 
     const handleChange = (e) => {
         setWord(e.target.value);
@@ -10,32 +10,28 @@ const WordForm = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=${word}`, {
-            method: "GET",
+            method: 'GET',
             headers: {
-                "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com",
-                "x-rapidapi-key": process.env.REACT_APP_RAPID_API_KEY,
+                'x-rapidapi-host': 'twinword-word-graph-dictionary.p.rapidapi.com',
+                'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY,
             },
         })
             .then((response) => response.json())
-            .then((definition) => props.getDefinition(definition))
+            .then((result) => props.getDefinition(result))
             .catch((err) => {
                 console.error(err);
             })
             .then(props.getWord(word));
-        // fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
-        //     .then((res) => res.json())
-        //     .then((result) => props.getDefinition(result[0].meanings))
-        //     .then(props.getWord(word));
-        setWord("");
+        setWord('');
     };
 
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="Type in word here" value={word} name={word} onChange={handleChange} />
+                <input type='text' placeholder='Type in word here' value={word} name={word} onChange={handleChange} />
                 <br />
                 <br />
-                <button type="submit">Find Definition</button>
+                <button type='submit'>Find Definition</button>
             </form>
         </div>
     );
