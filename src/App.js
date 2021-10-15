@@ -1,21 +1,18 @@
 import React, { useState } from 'react';
 import './App.css';
-import WordForm from './WordForm';
-import Result from './Result';
+import WordForm from './components/WordForm';
+import Results from './containers/Results';
 
 const App = () => {
-    console.log('App.js mounted');
     const [word, setWord] = useState('');
-    const [definition, setDefinition] = useState('');
+    const [results, setResults] = useState('');
 
     const getWord = (word) => {
-        console.log('getWord called');
         setWord(word);
     };
 
-    const getDefinition = (definition) => {
-        console.log('getDefinition called');
-        setDefinition(definition);
+    const getResults = (results) => {
+        setResults(results);
     };
 
     return (
@@ -23,10 +20,10 @@ const App = () => {
             <h1>Learn the Word</h1>
             <br />
 
-            <WordForm getWord={getWord} getDefinition={getDefinition} />
+            <WordForm getWord={getWord} getResults={getResults} />
             <br />
             <br />
-            <Result word={word} definition={definition} />
+            <Results word={word} results={results} />
         </div>
     );
 };

@@ -17,7 +17,7 @@ const WordForm = (props) => {
             },
         })
             .then((response) => response.json())
-            .then((result) => props.getDefinition(result))
+            .then((results) => props.getResults(results))
             .catch((err) => {
                 console.error(err);
             })
