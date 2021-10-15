@@ -4,7 +4,6 @@ const Result = (props) => {
     const word = props.word && props.word;
 
     const resultCode = props.definition.result_code;
-    // If resultCode === "200" render definition, else render error message
 
     if (resultCode === '200') {
         const noun = props.definition && props.definition.meaning.noun;
@@ -23,6 +22,12 @@ const Result = (props) => {
                 <li>{adjective}</li>
 
                 <h3>Synonyms:</h3>
+            </div>
+        );
+    } else if (resultCode === undefined) {
+        return (
+            <div>
+                <h2>PLEASE ENTER A WORD TO LEARN</h2>
             </div>
         );
     } else {

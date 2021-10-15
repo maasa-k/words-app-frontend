@@ -4,14 +4,17 @@ import WordForm from './WordForm';
 import Result from './Result';
 
 const App = () => {
+    console.log('App.js mounted');
     const [word, setWord] = useState('');
     const [definition, setDefinition] = useState('');
 
     const getWord = (word) => {
+        console.log('getWord called');
         setWord(word);
     };
 
     const getDefinition = (definition) => {
+        console.log('getDefinition called');
         setDefinition(definition);
     };
 
