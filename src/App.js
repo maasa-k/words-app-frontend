@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import WordForm from './components/WordForm';
 import Results from './containers/Results';
+import Typography from '@mui/material/Typography';
 
 const App = () => {
     const [word, setWord] = useState('');
@@ -17,7 +18,7 @@ const App = () => {
 
     return (
         <div className='App'>
-            <h1>Learn the Word</h1>
+            <Typography variant='h1'>Learn the Word</Typography>
             <br />
 
             <WordForm getWord={getWord} getResults={getResults} />

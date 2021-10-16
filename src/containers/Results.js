@@ -1,5 +1,6 @@
 import React from 'react';
 import Result from '../components/Result';
+import Typography from '@mui/material/Typography';
 
 const Results = (props) => {
     const word = props.word && props.word;
@@ -15,9 +16,9 @@ const Results = (props) => {
 
         return (
             <div>
-                <h1>{word}</h1>
+                <Typography variant='h3'>{word}</Typography>
 
-                <h3>Definition:</h3>
+                <Typography variant='h4'>Definition:</Typography>
                 <Result noun={noun} verb={verb} adverb={adverb} adjective={adjective} />
                 {/* <Result verb={verb} />
                 <Result adverb={adverb} />
@@ -27,7 +28,7 @@ const Results = (props) => {
     } else if (!resultCode) {
         return (
             <div>
-                <h2>PLEASE ENTER A WORD TO LEARN</h2>
+                <Typography variant='h2'>PLEASE ENTER A WORD TO LEARN</Typography>
             </div>
         );
     } else {

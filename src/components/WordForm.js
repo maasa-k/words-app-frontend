@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+// import TextField from '@mui/material/TextField';
+import Input from '@mui/material/Input';
 import Button from '@mui/material/Button';
 
 const WordForm = (props) => {
@@ -29,7 +31,7 @@ const WordForm = (props) => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type='text' placeholder='Type in word here' value={word} name={word} onChange={handleChange} />
+                <Input fullWidth placeholder='Type in word here' value={word} name={word} onChange={handleChange} />
                 <br />
                 <br />
                 <Button type='submit'>Find Definition</Button>
