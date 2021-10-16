@@ -2,7 +2,7 @@ import React from 'react';
 
 const Result = (props) => {
     return (
-        <div>
+        <div className='def-card'>
             <p>Noun: {props.noun}</p>
             <p>Verb: {props.verb}</p>
             <p>Adverb: {props.adverb}</p>

@@ -17,7 +17,7 @@ const Results = (props) => {
             <div>
                 <h1>{word}</h1>
 
-                <h3>Definitions:</h3>
+                <h3>Definition:</h3>
                 <Result noun={noun} verb={verb} adverb={adverb} adjective={adjective} />
                 {/* <Result verb={verb} />
                 <Result adverb={adverb} />

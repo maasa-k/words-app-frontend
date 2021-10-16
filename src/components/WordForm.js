@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '@mui/material/Button';
 
 const WordForm = (props) => {
     const [word, setWord] = useState('');
@@ -31,7 +32,7 @@ const WordForm = (props) => {
                 <input type='text' placeholder='Type in word here' value={word} name={word} onChange={handleChange} />
                 <br />
                 <br />
-                <button type='submit'>Find Definition</button>
+                <Button type='submit'>Find Definition</Button>
             </form>
         </div>
     );
