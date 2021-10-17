@@ -1,5 +1,6 @@
 import React from 'react';
 import Result from '../components/Result';
+import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Alert from '@mui/material/Alert';
 
@@ -15,25 +16,33 @@ const Results = (props) => {
       const adjective = props.results && props.results.meaning.adjective;
 
       return (
-         <div>
-            <Typography variant='h3'>{word}</Typography>
-
-            <Typography variant='h4'>Definition:</Typography>
+         <Container>
+            <Typography component='h3' style={{ fontSize: 30 }}>
+               {word}
+            </Typography>
+            <br />
+            <Container>
+               <Alert severity='success'>DEFINITIONS FOUND</Alert>
+            </Container>
+            <br />
             <Result noun={noun} verb={verb} adverb={adverb} adjective={adjective} />
-         </div>
+         </Container>
       );
    } else if (!resultCode) {
       return (
-         <div>
-            <Alert severity='info'>PLEASE ENTER A WORD TO LEARN</Alert>
-         </div>
+         <Container>
+            <Alert severity='info'>START LEARNING BY ENTERING A WORD ABOVE</Alert>
+         </Container>
       );
    } else {
       return (
-         <div>
-            <h1>{word}</h1>
-            <Alert severity='error'>NO DEFINITION FOUND</Alert>
-         </div>
+         <Container>
+            <Typography component='h3' style={{ fontSize: 30 }}>
+               {word}
+            </Typography>
+            <br />
+            <Alert severity='error'>NO DEFINITION FOUND, PLEASE TRY AGAIN</Alert>
+         </Container>
       );
    }
 };

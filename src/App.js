@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import WordForm from './components/WordForm';
+// import WordForm from './components/WordForm';
 import Results from './containers/Results';
 import Navbar from './components/Navbar';
 
@@ -18,11 +18,11 @@ const App = () => {
 
    return (
       <div className='App'>
-         <Navbar />
+         <Navbar getWord={getWord} getResults={getResults} />
          <br />
 
-         <WordForm getWord={getWord} getResults={getResults} />
-         <br />
+         {/* <WordForm getWord={getWord} getResults={getResults} /> */}
+
          <br />
          <Results word={word} results={results} />
       </div>
