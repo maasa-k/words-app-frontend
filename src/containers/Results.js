@@ -21,9 +21,6 @@ const Results = (props) => {
                {word}
             </Typography>
             <br />
-            <Container>
-               <Alert severity='success'>DEFINITIONS FOUND</Alert>
-            </Container>
             <br />
             <Result noun={noun} verb={verb} adverb={adverb} adjective={adjective} />
          </Container>
@@ -41,7 +38,7 @@ const Results = (props) => {
                {word}
             </Typography>
             <br />
-            <Alert severity='error'>NO DEFINITION FOUND, PLEASE TRY AGAIN</Alert>
+            <Alert severity='error'>NO DEFINITION FOUND PLEASE TRY AGAIN</Alert>
          </Container>
       );
    }
