@@ -4,33 +4,9 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 
 const Result = (props) => {
-   return (
-      <Container maxWidth='lg'>
-         <Box sx={{ textAlign: 'left' }}>
-            <Typography variant='p' component='h4'>
-               Noun: {props.noun}
-            </Typography>
-         </Box>
-         <br />
-         <Box sx={{ textAlign: 'left' }}>
-            <Typography variant='p' component='h4'>
-               Verb: {props.verb}
-            </Typography>
-         </Box>
-         <br />
-         <Box sx={{ textAlign: 'left' }}>
-            <Typography variant='p' component='h4'>
-               Adverb: {props.adverb}
-            </Typography>
-         </Box>
-         <br />
-         <Box sx={{ textAlign: 'left' }}>
-            <Typography variant='p' component='h4'>
-               Adjective: {props.adjective}
-            </Typography>
-         </Box>
-      </Container>
-   );
+   console.log('hit Result.js');
+   // console.log(props);
+   return <div>TEST</div>;
 };
 
 export default Result;

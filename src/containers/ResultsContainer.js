@@ -1,19 +1,20 @@
 import React from 'react';
-import Result from '../components/Result';
+import Results from '../components/Results';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Alert from '@mui/material/Alert';
 
-const Results = (props) => {
+const ResultsContainer = (props) => {
    const word = props.word && props.word;
 
    const resultCode = props.results.result_code;
+   const results = props.results && props.results;
 
    if (resultCode === '200') {
-      const noun = props.results && props.results.meaning.noun;
-      const verb = props.results && props.results.meaning.verb;
-      const adverb = props.results && props.results.meaning.adverb;
-      const adjective = props.results && props.results.meaning.adjective;
+      // const noun = props.results && props.results.meaning.noun;
+      // const verb = props.results && props.results.meaning.verb;
+      // const adverb = props.results && props.results.meaning.adverb;
+      // const adjective = props.results && props.results.meaning.adjective;
 
       return (
          <Container>
@@ -22,7 +23,8 @@ const Results = (props) => {
             </Typography>
             <br />
             <br />
-            <Result noun={noun} verb={verb} adverb={adverb} adjective={adjective} />
+            <Results results={results} />
+            {/* <Results noun={noun} verb={verb} adverb={adverb} adjective={adjective} /> */}
          </Container>
       );
    } else if (!resultCode) {
@@ -44,4 +46,4 @@ const Results = (props) => {
    }
 };
 
-export default Results;
+export default ResultsContainer;

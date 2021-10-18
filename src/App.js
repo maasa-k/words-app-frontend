@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 // import WordForm from './components/WordForm';
-import Results from './containers/Results';
+import ResultsContainer from './containers/ResultsContainer';
 import Navbar from './components/Navbar';
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
          {/* <WordForm getWord={getWord} getResults={getResults} /> */}
 
          <br />
-         <Results word={word} results={results} />
+         <ResultsContainer word={word} results={results} />
       </div>
    );
 };
