@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from '@mui/material/Container';
 import Result from './Result';
-import { Box } from '@mui/system';
 
 const Results = (props) => {
    const results = props.results && props.results.meaning;
@@ -24,10 +23,12 @@ const Results = (props) => {
       <Container>
          {Object.entries(meaningObj).map(([key, value]) => {
             return (
-               <Container style={{ textAlign: 'justify' }} key={key}>
-                  {key}: {value}
-                  <br />
-               </Container>
+               <Result keyWord={key} value={value} />
+               // <Container style={{ textAlign: 'justify' }} key={key}>
+               //    {key}: {value}
+               //    <br />
+               //    <br />
+               // </Container>
             );
          })}
       </Container>
@@ -35,27 +36,3 @@ const Results = (props) => {
 };
 
 export default Results;
-
-//  <Box sx={{ textAlign: 'left' }}>
-//     <Typography variant='p' component='h4'>
-//        Noun: {props.noun}
-//     </Typography>
-//  </Box>
-//  <br />
-//  <Box sx={{ textAlign: 'left' }}>
-//     <Typography variant='p' component='h4'>
-//        Verb: {props.verb}
-//     </Typography>
-//  </Box>
-//  <br />
-//  <Box sx={{ textAlign: 'left' }}>
-//     <Typography variant='p' component='h4'>
-//        Adverb: {props.adverb}
-//     </Typography>
-//  </Box>
-//  <br />
-//  <Box sx={{ textAlign: 'left' }}>
-//     <Typography variant='p' component='h4'>
-//        Adjective: {props.adjective}
-//     </Typography>
-//  </Box>

@@ -11,11 +11,6 @@ const ResultsContainer = (props) => {
    const results = props.results && props.results;
 
    if (resultCode === '200') {
-      // const noun = props.results && props.results.meaning.noun;
-      // const verb = props.results && props.results.meaning.verb;
-      // const adverb = props.results && props.results.meaning.adverb;
-      // const adjective = props.results && props.results.meaning.adjective;
-
       return (
          <Container>
             <Typography component='h3' style={{ fontSize: 30 }}>
@@ -24,7 +19,6 @@ const ResultsContainer = (props) => {
             <br />
             <br />
             <Results results={results} />
-            {/* <Results noun={noun} verb={verb} adverb={adverb} adjective={adjective} /> */}
          </Container>
       );
    } else if (!resultCode) {

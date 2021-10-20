@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-// import WordForm from './components/WordForm';
 import ResultsContainer from './containers/ResultsContainer';
 import Navbar from './components/Navbar';
 
@@ -20,9 +19,6 @@ const App = () => {
       <div className='App'>
          <Navbar getWord={getWord} getResults={getResults} />
          <br />
-
-         {/* <WordForm getWord={getWord} getResults={getResults} /> */}
-
          <br />
          <ResultsContainer word={word} results={results} />
       </div>
