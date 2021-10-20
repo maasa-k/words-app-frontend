@@ -1,6 +1,6 @@
 import React from 'react';
-import Container from '@mui/material/Container';
 import Result from './Result';
+import Grid from '@mui/material/Grid';
 
 const Results = (props) => {
    const results = props.results && props.results.meaning;
@@ -20,18 +20,17 @@ const Results = (props) => {
    }
 
    return (
-      <Container>
+      <div>
          {Object.entries(meaningObj).map(([key, value]) => {
             return (
-               <Result keyWord={key} value={value} />
-               // <Container style={{ textAlign: 'justify' }} key={key}>
-               //    {key}: {value}
-               //    <br />
-               //    <br />
-               // </Container>
+               <Grid container>
+                  <Grid item>
+                     <Result keyWord={key} value={value} />
+                  </Grid>
+               </Grid>
             );
          })}
-      </Container>
+      </div>
    );
 };
 
