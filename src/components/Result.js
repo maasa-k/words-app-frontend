@@ -10,50 +10,58 @@ const Result = (props) => {
 
    if (value.includes('(adj)')) {
       return (
-         <Card raised={true}>
-            <CardHeader title={keyWord} />
-            <CardContent>
-               {value.split('(adj)').map((adj) => (
-                  <Typography>{adj}</Typography>
-               ))}
-            </CardContent>
-         </Card>
+         <div className='result-card'>
+            <Card raised={true} style={{ backgroundColor: 'lightcyan' }}>
+               <CardHeader title={keyWord} />
+               <CardContent>
+                  {value.split('(adj)').map((adj) => (
+                     <Typography>{adj}</Typography>
+                  ))}
+               </CardContent>
+            </Card>
+         </div>
       );
    }
    if (value.includes('(adv)')) {
       return (
-         <Card raised={true}>
-            <CardHeader title={keyWord} />
-            <CardContent>
-               {value.split('(adv)').map((adv) => (
-                  <Typography>{adv}</Typography>
-               ))}
-            </CardContent>
-         </Card>
+         <div className='result-card'>
+            <Card raised={true} style={{ backgroundColor: 'lightpink' }}>
+               <CardHeader title={keyWord} />
+               <CardContent>
+                  {value.split('(adv)').map((adv) => (
+                     <Typography>{adv}</Typography>
+                  ))}
+               </CardContent>
+            </Card>
+         </div>
       );
    }
    if (value.includes('(nou)')) {
       return (
-         <Card raised={true}>
-            <CardHeader title={keyWord} />
-            <CardContent>
-               {value.split('(nou)').map((nou) => (
-                  <Typography>{nou}</Typography>
-               ))}
-            </CardContent>
-         </Card>
+         <div className='result-card'>
+            <Card raised={true} style={{ backgroundColor: 'lightgreen' }}>
+               <CardHeader title={keyWord} />
+               <CardContent>
+                  {value.split('(nou)').map((nou) => (
+                     <Typography>{nou}</Typography>
+                  ))}
+               </CardContent>
+            </Card>
+         </div>
       );
    }
    if (value.includes('(vrb)')) {
       return (
-         <Card raised={true}>
-            <CardHeader title={keyWord} />
-            <CardContent>
-               {value.split('(vrb)').map((vrb) => (
-                  <Typography>{vrb}</Typography>
-               ))}
-            </CardContent>
-         </Card>
+         <div className='result-card'>
+            <Card raised={true} style={{ backgroundColor: 'lightgoldenrodyellow' }}>
+               <CardHeader title={keyWord} />
+               <CardContent>
+                  {value.split('(vrb)').map((vrb) => (
+                     <Typography>{vrb}</Typography>
+                  ))}
+               </CardContent>
+            </Card>
+         </div>
       );
    }
 };
