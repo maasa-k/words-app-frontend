@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Words App (aka Learn the Word)
+
+A simple dictionary [React](https://reactjs.org/) app geared toward kids for the English language that fetches data from the [RapidAPI Word Dictionary](https://rapidapi.com/twinword/api/word-dictionary/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
