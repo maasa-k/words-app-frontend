@@ -8,17 +8,54 @@ const Result = (props) => {
    const keyWord = props.keyWord && props.keyWord;
    const value = props.value && props.value;
 
-   return (
-      <div>
-         <Card elevation={3}>
+   if (value.includes('(adj)')) {
+      return (
+         <Card raised={true}>
             <CardHeader title={keyWord} />
             <CardContent>
-               <Typography variant='body2'>{value}</Typography>
+               {value.split('(adj)').map((adj) => (
+                  <Typography>{adj}</Typography>
+               ))}
             </CardContent>
          </Card>
-         <br />
-      </div>
-   );
+      );
+   }
+   if (value.includes('(adv)')) {
+      return (
+         <Card raised={true}>
+            <CardHeader title={keyWord} />
+            <CardContent>
+               {value.split('(adv)').map((adv) => (
+                  <Typography>{adv}</Typography>
+               ))}
+            </CardContent>
+         </Card>
+      );
+   }
+   if (value.includes('(nou)')) {
+      return (
+         <Card raised={true}>
+            <CardHeader title={keyWord} />
+            <CardContent>
+               {value.split('(nou)').map((nou) => (
+                  <Typography>{nou}</Typography>
+               ))}
+            </CardContent>
+         </Card>
+      );
+   }
+   if (value.includes('(vrb)')) {
+      return (
+         <Card raised={true}>
+            <CardHeader title={keyWord} />
+            <CardContent>
+               {value.split('(vrb)').map((vrb) => (
+                  <Typography>{vrb}</Typography>
+               ))}
+            </CardContent>
+         </Card>
+      );
+   }
 };
 
 export default Result;
