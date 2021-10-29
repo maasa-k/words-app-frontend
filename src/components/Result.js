@@ -3,6 +3,7 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -11,6 +12,9 @@ const useStyles = makeStyles({
          backgroundColor: 'yellow',
          fontWeight: 'bold',
       },
+   },
+   cards: {
+      paddingBottom: 15,
    },
 });
 
@@ -22,7 +26,7 @@ const Result = (props) => {
 
    if (value.includes('(adj)')) {
       return (
-         <div className='result-card'>
+         <Grid item className={classes.cards} xs={6}>
             <Card raised={true} style={{ backgroundColor: 'lightcyan' }}>
                <CardHeader title={keyWord} />
                <CardContent>
@@ -34,12 +38,12 @@ const Result = (props) => {
                      ))}
                </CardContent>
             </Card>
-         </div>
+         </Grid>
       );
    }
    if (value.includes('(adv)')) {
       return (
-         <div className='result-card'>
+         <Grid item className={classes.cards} xs={6}>
             <Card raised={true} style={{ backgroundColor: 'lightpink' }}>
                <CardHeader title={keyWord} />
                <CardContent>
@@ -51,12 +55,12 @@ const Result = (props) => {
                      ))}
                </CardContent>
             </Card>
-         </div>
+         </Grid>
       );
    }
    if (value.includes('(nou)')) {
       return (
-         <div className='result-card'>
+         <Grid item className={classes.cards} xs={6}>
             <Card raised={true} style={{ backgroundColor: 'lightgreen' }}>
                <CardHeader title={keyWord} />
                <CardContent>
@@ -68,12 +72,12 @@ const Result = (props) => {
                      ))}
                </CardContent>
             </Card>
-         </div>
+         </Grid>
       );
    }
    if (value.includes('(vrb)')) {
       return (
-         <div className='result-card'>
+         <Grid item className={classes.cards} xs={6}>
             <Card raised={true} style={{ backgroundColor: 'lightsalmon' }}>
                <CardHeader title={keyWord} />
                <CardContent>
@@ -85,7 +89,7 @@ const Result = (props) => {
                      ))}
                </CardContent>
             </Card>
-         </div>
+         </Grid>
       );
    }
 };

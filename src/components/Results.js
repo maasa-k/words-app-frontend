@@ -23,10 +23,8 @@ const Results = (props) => {
       <div>
          {Object.entries(meaningObj).map(([key, value]) => {
             return (
-               <Grid container>
-                  <Grid item>
-                     <Result keyWord={key} value={value} />
-                  </Grid>
+               <Grid container direction='row' justifyContent='center' alignItems='stretch'>
+                  <Result keyWord={key} value={value} />
                </Grid>
             );
          })}
