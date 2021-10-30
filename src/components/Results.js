@@ -20,15 +20,14 @@ const Results = (props) => {
    }
 
    return (
-      <div>
+      <Grid container spacing={2}>
+         {/* <Grid container direction='row' justifyContent='center' alignItems='stretch'> */}
+         {/* <div> */}
          {Object.entries(meaningObj).map(([key, value]) => {
-            return (
-               <Grid container direction='row' justifyContent='center' alignItems='stretch'>
-                  <Result keyWord={key} value={value} />
-               </Grid>
-            );
+            return <Result keyWord={key} value={value} />;
          })}
-      </div>
+         {/* </div> */}
+      </Grid>
    );
 };
 
