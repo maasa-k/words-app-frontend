@@ -78,9 +78,6 @@ const Navbar = (props) => {
       <Box sx={{ flexGrow: 1 }}>
          <AppBar position='static'>
             <Toolbar>
-               <Typography variant='h6' noWrap component='div' sx={{ textAlign: 'left', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-                  Learn the Word
-               </Typography>
                <form onSubmit={handleSubmit}>
                   <Search>
                      <SearchIconWrapper>
@@ -95,6 +92,9 @@ const Navbar = (props) => {
                      />
                   </Search>
                </form>
+               <Typography variant='h6' noWrap component='div' sx={{ textAlign: 'right', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
+                  Learn the Word
+               </Typography>
             </Toolbar>
          </AppBar>
       </Box>

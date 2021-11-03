@@ -13,7 +13,7 @@ const ResultsContainer = (props) => {
    if (resultCode === '200') {
       return (
          <Container>
-            <Typography component='h3' style={{ fontSize: 40, color: 'green' }}>
+            <Typography component='h3' style={{ fontSize: 35, color: 'green' }}>
                {word}
             </Typography>
             <br />
@@ -30,7 +30,7 @@ const ResultsContainer = (props) => {
    } else {
       return (
          <Container>
-            <Typography component='h3' style={{ fontSize: 30 }}>
+            <Typography component='h3' style={{ fontSize: 35, color: 'green' }}>
                {word}
             </Typography>
             <br />

@@ -26,16 +26,14 @@ const Result = (props) => {
 
    if (value.includes('(adj)')) {
       return (
-         <Grid item className={classes.cards} xs={6}>
+         // <Grid item className={classes.cards} xs={6}>
+         <Grid item xs={2} sm={4} md={4}>
             <Card raised={true} style={{ backgroundColor: 'lightcyan' }}>
                <CardHeader title={keyWord} />
                <CardContent>
-                  {value
-                     .split('(adj)')
-                     .slice(1, -1)
-                     .map((adj) => (
-                        <Typography className={classes.results}>{adj}</Typography>
-                     ))}
+                  {value.split('(adj)').map((adj) => (
+                     <Typography className={classes.results}>{adj}</Typography>
+                  ))}
                </CardContent>
             </Card>
          </Grid>
@@ -43,16 +41,14 @@ const Result = (props) => {
    }
    if (value.includes('(adv)')) {
       return (
-         <Grid item className={classes.cards} xs={6}>
+         // <Grid item className={classes.cards} xs={6}>
+         <Grid item xs={2} sm={4} md={4}>
             <Card raised={true} style={{ backgroundColor: 'lightpink' }}>
                <CardHeader title={keyWord} />
                <CardContent>
-                  {value
-                     .split('(adv)')
-                     .slice(1, -1)
-                     .map((adv) => (
-                        <Typography className={classes.results}>{adv}</Typography>
-                     ))}
+                  {value.split('(adv)').map((adv) => (
+                     <Typography className={classes.results}>{adv}</Typography>
+                  ))}
                </CardContent>
             </Card>
          </Grid>
@@ -60,16 +56,14 @@ const Result = (props) => {
    }
    if (value.includes('(nou)')) {
       return (
-         <Grid item className={classes.cards} xs={6}>
+         // <Grid item className={classes.cards} xs={6}>
+         <Grid item xs={2} sm={4} md={4}>
             <Card raised={true} style={{ backgroundColor: 'lightgreen' }}>
                <CardHeader title={keyWord} />
                <CardContent>
-                  {value
-                     .split('(nou)')
-                     .slice(1, -1)
-                     .map((nou) => (
-                        <Typography className={classes.results}>{nou}</Typography>
-                     ))}
+                  {value.split('(nou)').map((nou) => (
+                     <Typography className={classes.results}>{nou}</Typography>
+                  ))}
                </CardContent>
             </Card>
          </Grid>
@@ -77,16 +71,14 @@ const Result = (props) => {
    }
    if (value.includes('(vrb)')) {
       return (
-         <Grid item className={classes.cards} xs={6}>
+         // <Grid item className={classes.cards} xs={6}>
+         <Grid item xs={2} sm={4} md={4}>
             <Card raised={true} style={{ backgroundColor: 'lightsalmon' }}>
                <CardHeader title={keyWord} />
                <CardContent>
-                  {value
-                     .split('(vrb)')
-                     .slice(1, -1)
-                     .map((vrb) => (
-                        <Typography className={classes.results}>{vrb}</Typography>
-                     ))}
+                  {value.split('(vrb)').map((vrb) => (
+                     <Typography className={classes.results}>{vrb}</Typography>
+                  ))}
                </CardContent>
             </Card>
          </Grid>

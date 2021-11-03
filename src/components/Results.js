@@ -1,6 +1,7 @@
 import React from 'react';
 import Result from './Result';
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
 const Results = (props) => {
    const results = props.results && props.results.meaning;
@@ -20,14 +21,17 @@ const Results = (props) => {
    }
 
    return (
-      <Grid container spacing={2}>
-         {/* <Grid container direction='row' justifyContent='center' alignItems='stretch'> */}
-         {/* <div> */}
-         {Object.entries(meaningObj).map(([key, value]) => {
-            return <Result keyWord={key} value={value} />;
-         })}
-         {/* </div> */}
-      </Grid>
+      <Box sx={{ flexGrow: 1 }}>
+         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+            {/* <Grid container spacing={2}> */}
+            {/* <Grid container direction='row' justifyContent='center' alignItems='stretch'> */}
+            {/* <div> */}
+            {Object.entries(meaningObj).map(([key, value]) => {
+               return <Result keyWord={key} value={value} />;
+            })}
+            {/* </div> */}
+         </Grid>
+      </Box>
    );
 };
 
