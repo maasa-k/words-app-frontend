@@ -1,5 +1,6 @@
 import React from 'react';
 import Results from '../components/Results';
+import ExampleButton from '../components/ExampleButton';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Alert from '@mui/material/Alert';
@@ -17,8 +18,9 @@ const ResultsContainer = (props) => {
                {word}
             </Typography>
             <br />
-            <br />
             <Results results={results} />
+            <br />
+            <ExampleButton word={word} />
          </Container>
       );
    } else if (!resultCode) {

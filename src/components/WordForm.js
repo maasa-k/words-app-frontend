@@ -32,9 +32,6 @@ const WordForm = (props) => {
       <div>
          <form onSubmit={handleSubmit}>
             <Input placeholder='Type in word here' value={word} name={word} onChange={handleChange} />
-            <br />
-            <br />
-            <Button type='submit'>Find Definition</Button>
          </form>
       </div>
    );

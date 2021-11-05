@@ -19,7 +19,6 @@ const App = () => {
       <div className='App'>
          <Navbar getWord={getWord} getResults={getResults} />
          <br />
-         <br />
          <ResultsContainer word={word} results={results} />
       </div>
    );

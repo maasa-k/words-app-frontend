@@ -27,7 +27,8 @@ const Result = (props) => {
    if (value.includes('(adj)')) {
       return (
          // <Grid item className={classes.cards} xs={6}>
-         <Grid item xs={2} sm={4} md={4}>
+         <Grid item xs={6} sm={12} lg={6}>
+            {/* <Grid item xs={2} sm={4} md={4}> */}
             <Card raised={true} style={{ backgroundColor: 'lightcyan' }}>
                <CardHeader title={keyWord} />
                <CardContent>
@@ -42,7 +43,8 @@ const Result = (props) => {
    if (value.includes('(adv)')) {
       return (
          // <Grid item className={classes.cards} xs={6}>
-         <Grid item xs={2} sm={4} md={4}>
+         <Grid item xs={6} sm={12} lg={6}>
+            {/* <Grid item xs={2} sm={4} md={4}> */}
             <Card raised={true} style={{ backgroundColor: 'lightpink' }}>
                <CardHeader title={keyWord} />
                <CardContent>
@@ -57,7 +59,8 @@ const Result = (props) => {
    if (value.includes('(nou)')) {
       return (
          // <Grid item className={classes.cards} xs={6}>
-         <Grid item xs={2} sm={4} md={4}>
+         <Grid item xs={6} sm={12} lg={6}>
+            {/* <Grid item xs={2} sm={4} md={4}> */}
             <Card raised={true} style={{ backgroundColor: 'lightgreen' }}>
                <CardHeader title={keyWord} />
                <CardContent>
@@ -72,7 +75,8 @@ const Result = (props) => {
    if (value.includes('(vrb)')) {
       return (
          // <Grid item className={classes.cards} xs={6}>
-         <Grid item xs={2} sm={4} md={4}>
+         <Grid item xs={6} sm={12} lg={6}>
+            {/* <Grid item xs={2} sm={4} md={4}> */}
             <Card raised={true} style={{ backgroundColor: 'lightsalmon' }}>
                <CardHeader title={keyWord} />
                <CardContent>
